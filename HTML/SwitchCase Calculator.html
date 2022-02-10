@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+         <Title>Calculator Using Switch Case</Title>
+</head>   
+<body>
+    <h2 style="text-align:center">Calculator</h2><br>
+	
+         <input type="number" id="n1" placeholder="Enter First Number"> <br>
+		 
+		 <input type="number" id="n2" placeholder="Enter Second Number"> <br>
+		 
+		   <p><button onclick="Calculator()"> Calculate </button></p>
+		 <p id="Calculate"></p>
+		   <br>
+		   
+		    <select id="op">
+	                     <option>Select Operator</option>
+	             		<option>+</option>
+		   	            <option>/</option>
+			            <option>-</option>
+			            <option>*</option>
+			</select><br>
+	<script>
+	  function Calculator(){
+	     
+		 var x=document.getElementById('n1').value;
+		 var y=document.getElementById('n2').value;
+		 var op=document.getElementById('op').value;
+		 switch (op){
+		    case '+':
+			        result= parseFloat(x) + parseFloat(y);
+					<!--Confirm("result:"+result);-->
+					document.getElementById('Calculate').innerHTML=result;
+					break;
+            case '/':
+			        result= parseFloat(x) / parseFloat
+					<!--Alert("result:"+result);-->
+					document.getElementById('Calculate').innerHTML=result;
+					break;
+            case '-':
+			        result= parseFloat(x) - parseFloat(y);
+					<!--Prompt("result:"+result);-->
+					document.getElementById('Calculate').innerHTML=result;
+					break;
+            case '*':
+			        result= parseFloat(x) * parseFloat(y);
+					<!--Mul("result:"+result);-->
+					document.getElementById('Calculate').innerHTML=result;
+					break;						 
+		            }
+					
+					
+	      
+	                        }
+    </script>
+</body>
+</html>

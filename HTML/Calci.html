@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<style>
+button
+{
+	background-color:lightgray;
+	border-radius:5px;	
+}
+div{
+	margin-left:500px;
+	border:1px solid black; 
+	width:200px;
+	height:280px;
+	padding:20px; 
+	border-radius:10px;
+	background-color:lightblue;
+}
+</style>
+</head>
+<body>
+	<div>
+	<h2>Sample Calculator</h2><hr>
+	<br><input type="number" id="n1" name="n1" placeholder="Enter first no..">
+	<br><br>
+	<br> <input type="number" id="n2" name="n2" placeholder="Enter second no..">
+	<br><br>
+	Result:<br><input id="answer">
+	<br><br>
+	<button onclick="add()">Add</button>
+	<button onclick="sub()">Sub</button>
+	<button onclick="mul()">Mul</button>
+	<button onclick="div()">Div</button>
+	<script>
+		function add()
+		{
+			var a,b,c;
+			a=Number(document.getElementById("n1").value); b=Number(document.getElementById("n2").value);
+			c= a + b; document.getElementById("answer").value= c;
+		}
+		function sub()
+		{
+			var a,b,c;
+			a=Number(document.getElementById("n1").value); b=Number(document.getElementById("n2").value);
+			c= a - b; document.getElementById("answer").value= c;
+		}
+		function mul()
+		{
+			var a,b,c;
+			a=Number(document.getElementById("n1").value); b=Number(document.getElementById("n2").value);
+			c= a * b; document.getElementById("answer").value= c;
+		}
+		function div()
+		{
+			var a,b,c;
+			a=Number(document.getElementById("n1").value); b=Number(document.getElementById("n2").value);
+			c= a / b; document.getElementById("answer").value= c;
+		}
+	</script>
+	</div>
+</body>
+</html>
